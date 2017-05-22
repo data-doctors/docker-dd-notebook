@@ -6,4 +6,4 @@ if [ $# -eq 0 ]
 		exit 1
 fi
 
-docker run -it -v $1:/home/jovyan/work --rm -p 8888:8888 data-doctor-notebook start-notebook.sh --NotebookApp.base_url=/home/jovyan/
+docker run --name notebook -it -v $1:/home/jovyan/work --rm -p 8888:8888 data-doctor-notebook start-notebook.sh --NotebookApp.base_url=/home/jovyan/
